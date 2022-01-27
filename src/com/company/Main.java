@@ -2,7 +2,6 @@ package com.company;
 
 import java.util.Scanner;
 import java.util.SortedMap;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -40,9 +39,15 @@ public class Main {
         if (word.length() < 5) {
             return word;
         }
+        char[] wordChar = word.toCharArray();
+        String tmpString = "";
+        for (int i = wordChar.length - 1 ; i > 0 ; i--) {
+            tmpString += wordChar[i];
 
-        StringBuilder maciek = new StringBuilder(word); /// TODO: 26/01/2022 get rid of StringBuilder and use a loop 
-        return maciek.reverse().toString();
+        }
+       //  StringBuilder maciek = new StringBuilder(word); /// TODO: 26/01/2022 get rid of StringBuilder and use a loop
+       // return maciek.reverse().toString();
+        return tmpString;
     }
 
 }
